@@ -59,6 +59,13 @@ body {
   border-bottom: 3px solid var(--main-color);
 }
 
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--main-color);
+  cursor: pointer;
+  display: none;
+}
+
 section {
   min-height: 100vh;
   padding: 10rem 12% 10rem;
@@ -109,6 +116,7 @@ span {
 }
 
 .home-img img {
+  min-width: 300px;
   position: relative;
   top: 3rem;
   width: 28vw;
@@ -209,35 +217,35 @@ span {
   height: 100%;
   border-left: 3px solid var(--bg-color);
   right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+  animation: cursor 0.7s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
   to {
-    border-left: 2px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
   }
 }
 
 @keyframes words {
   0%,
   20% {
-    content: "Desenvolvedor Web Front-End";
+    content: "Desenvolvedor Web Front-End.";
   }
   21%,
   40% {
-    content: "Web Designer";
+    content: "Web Designer.";
   }
   41%,
   60% {
-    content: "Apaixonado por tecnologia";
+    content: "Apaixonado por tecnologia.";
   }
   61%,
   80% {
-    content: "Estudante de Engenharia de Software";
+    content: "Futuro Engenharo de Software.";
   }
   81%,
   100% {
-    content: "Entusiasta de programação";
+    content: "Entusiasta de programação.";
   }
 }
 
@@ -459,12 +467,12 @@ span {
   background-color: var(--bg-color);
   border-radius: 2rem;
   border: 2px solid var(--main-color);
-  margin: 1.5rem 0;
+  margin: 1.2rem 0;
   resize: none;
 }
 
 .contact form .btn {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 /* footer */
@@ -503,7 +511,7 @@ span {
   box-shadow: 0 0 25px var(--main-color);
 }
 
-.footer .copyrigth {
+.footer .copyright {
   margin-top: 20px;
   text-align: center;
   font-size: 1.5rem;
@@ -520,3 +528,112 @@ span {
   width: 50px;
 }
 
+@media (max-width: 1284px) {
+  html {
+    font-size: 55%;
+  }
+  .services-container {
+    padding-bottom: 7rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 4%;
+  }
+  section {
+    padding: 10rem 4% 2rem;
+  }
+  .timeline-itens::before {
+    left: 7px;
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+  .timeline-dot {
+    left: 0;
+  }
+  .services {
+    padding-bottom: 7rem;
+  }
+  .contact form {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 890px) {
+  #menu-icon {
+    display: block;
+  }
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 35%;
+    padding: 1rem 3%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+  }
+  .nav.active {
+    display: block;
+  }
+  .nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: #fff;
+  }
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 4rem;
+  }
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home-content h1 {
+    font-size: 6rem;
+    margin-top: 1rem;
+  }
+  .home-content p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .home-img img {
+    width: 56vw;
+  }
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+    margin-top: 1rem;
+  }
+  .heading {
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+}
