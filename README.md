@@ -23,4 +23,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Este é o meu portfólio, contendo os meus mais recentes trabalhos.
 
-- [Acesse o projeto finalizado, online](https://portfolio-f2xjm3sah-lorran-franklins-projects.vercel.app/)
+- [Acesse o projeto finalizado, online](https://portfolio-01-vert.vercel.app/)
